@@ -2,143 +2,176 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:  Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header{ 
-    background: blueviolet;
+header{
+    background-color: blueviolet;
+    border: 2px solid black;
     margin: 10px;
     border-radius: 10px;
-    align-items: center;
     display: block;
+    align-items: center;
 }
 
-header ul{
+header ul {
     display: flex;
     padding: 10px;
 }
 
-header ul li{
+header ul li {
     list-style-type: none;
     padding: 10px;
 }
 
-header ul li  :hover{
-    background: rgb(57, 8, 51);
+header ul li:hover {
     transition: 1s;
 }
 
 header ul li a{
     color: aliceblue;
+    font-weight: bold;
     text-decoration: none;
+    padding: 10px;
 }
 
 header ul li a:hover {
-    color: rgb(80, 50, 212);
+    background-color: rgb(167, 38, 162);
+    color: rgb(6, 104, 216);
+    font-weight: bold;
     transition: 1s;
 }
-
-main{
+ main {
     border: 2px solid black;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-}
+ }
 
-main h1{
+ main h1 {
     margin-bottom: 10px;
-}
+ }
 
-#clientes table{
+ #clientes table {
     width: 100%;
     font-size: 20px;
     border-spacing: 0;
+ }
+
+#clientes table th, #clientes table td {
+    border-bottom: 2px solid gray;
+    text-align: left;
+} 
+
+#clientes table td {
+    padding: 10px 0;
 }
 
-#clientes table th, #clientes table td{
-  
-    border-bottom: 2px solid grey;
-    text-align: left; 
-}
-
-#clientes table td{
-    padding: 10px;
-}
-
-#clientes table tr{
+#clientes table tr {
     transition: 1s;
 }
 
-#clientes table tr:hover{
-   font-size: 25px;
-   font-weight: bold;
-   transition: 1s;
-   color: blueviolet;
+#clientes table tbody tr:hover {
+    font-size: 25px;
+    font-weight: bold;
+    transition: 1s;
+    color: blueviolet;
 }
 
-.orcamentos{
+.orcamentos {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25% ;
-
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
-.card-orcamento{
+.card-orcamento {
     display: flex;
     flex-wrap: wrap;
     border: 2px solid blueviolet;
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
     padding: 10px;
 }
 
-.card-orcamento div{
+.card-orcamento div {
     width: 50%;
 }
 
-.card-orcamento h2{
-   font-size: 20px;
+.card-orcamento h2 {
+ font-size: 20px;
 }
 
-.card-orcamento .control{
+.card-orcamento .control {
     width: 100%;
     padding: 10px 0;
-  
 }
 
-.control button{
+.control button {
     width: 100%;
     padding: 10px 0;
-    border: 2px solid blueviolet;
-    font-size: 20px;
-    border-radius: 10px;
     margin-top: 10px;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    font-size: 20px;
     color: blueviolet;
     font-weight: bold;
     transition: 1s;
 }
 
-.control button:hover{
-    background: blueviolet;
+.control button:hover {
+    background-color: blueviolet;
     color: white;
     transition: 1s;
     font-size: 22px;
 }
 
-@media screen and (max-width:1200px){
-    .orcamentos{
+.hidden {
+    display: none;
+}
+
+.icon {
+    font-size: 25pt;
+    border: 2px solid white;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 0 5px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 1200px){
+    .orcamentos {
         grid-template-columns: 33% 33% 33%;
     }
 }
 
-@media screen and (max-width:800px){
-    .orcamentos{
+@media screen and (max-width: 800px ){
+    .orcamentos {
         grid-template-columns: 50% 50%;
     }
 }
 
-@media screen and (max-width:500px){
-    .orcamentos{
+@media screen and (max-width: 500px) {
+
+    header ul {
+        flex-direction: column;
+    }
+
+    .orcamentos {
         grid-template-columns: 100%;
     }
-}
 
+    .icon {
+        display: inline;
+    }
+
+    .hidden-mob{
+        display: none;
+    }
+
+    [name="email"]{
+        display: none;
+    }
+}
